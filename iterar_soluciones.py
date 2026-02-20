@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-intervalo = [x/10 for x in range(5000)]
+intervalo = [x/10 for x in range(200)]
 
 def VaporTacho_i(t, t0):
   return 1 - (2*t0-2*t + 1)**2 if t > t0 and t < t0+1 else 0
@@ -26,7 +26,7 @@ mejor_resultado = {
 }
 
 for i in decimal_list:
-    tiempos_inicio = [i * x for x in range(500)]
+    tiempos_inicio = [i * x for x in range(20)]
     #print(lista)
     vapor_total = VaporTotal(tiempos_inicio, intervalo)
     variacion_actual = variacion_total(vapor_total)
